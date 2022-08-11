@@ -8,6 +8,7 @@ namespace ChannelSample
     {
         public BenchmarkConfig()
         {
+            AddColumn(StatisticColumn.AllStatistics);
             AddAnalyser(new BaselineCustomAnalyzer());
         }
     }
