@@ -6,6 +6,7 @@ using BenchmarkDotNet.Configs;
 
 namespace ChannelSample
 {
+    [MemoryDiagnoser]
     [Config(typeof(BenchmarkConfig))]
     public  class ChannelBenchmarkTest
     {
@@ -20,7 +21,6 @@ namespace ChannelSample
                 _myChannel.Write(0);
                 await rTask;
             }  
-
         }
 
         [Benchmark]
